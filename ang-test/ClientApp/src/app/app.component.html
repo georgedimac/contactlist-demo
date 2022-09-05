@@ -1,0 +1,8 @@
+<h1 id="tableLabel">Samsung address book</h1>
+
+
+<p *ngIf="!contacts"><em>Loading...</em></p>
+
+<li *ngFor="let contact of contacts">
+    <button mat-button (click)="openDialog(contact.address)">{{contact.name}}</button>
+</li>
